@@ -11,7 +11,7 @@ const ExpertTeam = () => {
         {/* Founder Image and Name */}
         <div className="flex flex-col items-center mt-10">
           <div className="bg-[#f5fafd] rounded-2xl shadow-xl p-2 mb-0">
-            <img src={gagan} alt="Dr. Gagan Mahalwanshi" className="w-100 h-140 object-cover rounded-2xl" />
+            <img src={gagan} alt="Dr. Gagan Mahalwanshi" className="w-90 h-110 object-cover rounded-2xl" />
           </div>
           <div className="bg-white rounded-xl shadow-lg px-8 py-4 -mt-8 z-10 text-center">
             <div className="text-xl font-bold text-blue-900">Dr. Gagan Mahalwanshi</div>

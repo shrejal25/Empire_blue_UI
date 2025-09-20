@@ -1,10 +1,10 @@
 import React from 'react';
 import './Impact.css';
-import image from '../../assets/images/image.webp';
+import drop from '../../assets/images/waterDrop.png';
 
 const Impact = () => {
   return (
-    <section className="w-full min-h-[60vh] bg-[#e3ebf0] flex items-center justify-center">
+    <section className="w-full min-h-[60vh] bg-[#d7e0e7] flex items-center justify-center">
       <div className="w-[90vw] max-w-[1250px] bg-[#e4e9ed] rounded-[32px] shadow-2xl flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-10 md:py-8 border-2 border-white">
         {/* Left: Current Situation */}
         <div className="flex-1 flex flex-col items-start justify-center mb-10 md:mb-0 md:mr-6">
@@ -19,8 +19,8 @@ const Impact = () => {
         {/* Center: Water Drop Image */}
         <div className="flex-shrink-0 flex items-center justify-center mx-0 md:mx-8 mb-8 md:mb-0">
           <div className="relative flex items-center justify-center">
-            <div className="absolute w-64 h-64 bg-blue-200 rounded-full opacity-60" style={{zIndex:0}}></div>
-            <img src={image} alt="Water Drop" className="w-40 h-40 z-10 relative" />
+            <div className="absolute w-61 h-61 bg-blue-200 rounded-full opacity-60" style={{zIndex:0}}></div>
+            <img src={drop} alt="Water Drop" className="w-40 h-40 z-10 relative" />
           </div>
         </div>
         {/* Right: Health Impact */}

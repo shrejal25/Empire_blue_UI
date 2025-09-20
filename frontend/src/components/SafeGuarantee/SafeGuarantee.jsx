@@ -37,7 +37,7 @@ const SafeGuarantee = () => {
   ];
 
   return (
-    <section className="w-full bg-[#e3ebf0] flex items-center justify-center py-10">
+    <section className="w-full bg-[#d7e0e7] flex items-center justify-center py-10">
       <div className="w-[90vw] max-w-[1250px] flex flex-col md:flex-row gap-2 md:gap-10 items-stretch justify-center">
         {cards.map((card, idx) => (
           <GuaranteeCard

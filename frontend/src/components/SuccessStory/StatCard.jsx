@@ -4,7 +4,7 @@ const StatCard = ({ icon, iconBg, value, label, highlight, active, onClick }) =>
   <div
     className={`group flex flex-col items-center justify-center bg-white rounded-3xl shadow-xl px-8 py-10 min-w-[220px] min-h-[200px] mx-3 border-2 border-transparent cursor-pointer transition-all duration-200
       ${highlight ? 'bg-gradient-to-br from-blue-100 via-white to-green-100 border-blue-200' : ''}
-      ${active ? 'ring-4 ring-blue-400 scale-105 z-10 -translate-y-2' : ''}
+      ${active ? 'ring-4 ring-white scale-105 z-10 -translate-y-2' : ''}
       hover:ring-2 hover:ring-white hover:scale-105 hover:z-10 hover:-translate-y-2`
     }
     onClick={onClick}

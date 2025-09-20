@@ -60,7 +60,7 @@ const stats = [
 const SuccessStory = () => {
   const [activeIdx, setActiveIdx] = useState(null);
   return (
-    <section className="w-full bg-[#e3ebf0] flex flex-col items-center justify-center py-12">
+    <section className="w-full bg-[#d7e0e7] flex flex-col items-center justify-center py-12">
       <h2 className="text-4xl md:text-6xl font-bold text-center mb-2 text-blue-900">
         Our <span className="bg-gradient-to-r from-blue-900 via-blue-500 to-green-400 bg-clip-text text-transparent">Success</span> Story
       </h2>

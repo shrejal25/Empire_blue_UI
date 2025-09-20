@@ -3,8 +3,8 @@ import about from '../../assets/images/about.webp';
 
 const AboutUs = () => {
   return (
-    <section className="w-full min-h-[70vh] bg-[#e3ebf0] flex items-center justify-center">
-      <div className="w-[90vw] max-w-[1500px] bg-[#e3ebf0] rounded-[40px] flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-12 md:pt-20">
+    <section className="w-full min-h-[70vh] bg-[#d7e0e7] flex items-center justify-center">
+      <div className="w-[90vw] max-w-[1500px] bg-[#d7e0e7] rounded-[40px] flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-12 md:pt-20">
         {/* Left: Text Content */}
         <div className="flex-1 flex flex-col items-start justify-center mb-10 md:mb-0 md:mr-10">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-blue-900">

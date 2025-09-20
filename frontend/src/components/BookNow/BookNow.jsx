@@ -22,8 +22,8 @@ const Dots = () => (
 
 const BookNow = () => {
   return (
-    <section className="w-full min-h-[50vh] bg-[#ccd6dd] flex items-center justify-center py-15">
-      <div className="relative w-[100vw] max-w-5xl bg-[#ecf1f5] rounded-3xl shadow-2xl flex flex-col items-center justify-center px-30 md:px-30 py-16">
+    <section className="w-full min-h-[50vh] bg-[#d7e0e7] flex items-center justify-center py-15">
+      <div className="relative w-[100vw] max-w-5xl bg-[#ecf1f5] rounded-3xl shadow-lg flex flex-col items-center justify-center px-30 md:px-30 py-16">
         {/* Top Left Dots */}
         <div className="absolute top-6 left-6"><Dots /></div>
         {/* Top Right Dots */}

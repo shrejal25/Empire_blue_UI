@@ -41,7 +41,7 @@ const ContactUs = () => {
 
   
   {/* Bottom curve decorative element */}
-  <div className="absolute bottom-0 top-152 left-0 w-full h-[200px] z-[1] pointer-events-none drop-shadow-[0_-5px_15px_rgba(0,0,0,0.1)]">
+  <div className="absolute bottom-0 top-152 left-0 w-full h-[200px] z-[1] pointer-events-none">
     <svg className="w-full h-full block" viewBox="0 0 1440 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <path d="M0,0  C240,200 480,280 720,280  C960,280 1200,200 1440,0" stroke="#fff" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
       <path d="M0,0  C240,200 480,280 720,280  C960,280 1200,200 1440,0  L1440,500 L0,500 Z" fill="#D7E0E7" filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1)"></path>
