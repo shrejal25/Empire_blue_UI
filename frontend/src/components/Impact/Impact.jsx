@@ -1,5 +1,6 @@
 
-import drop from '../../assets/images/waterDrop.png';
+import droplet from '../../assets/images/water-droplet.webp';
+import { motion } from 'framer-motion';
 
 const Impact = () => {
   return (
@@ -19,7 +20,20 @@ const Impact = () => {
         <div className="flex-shrink-0 flex items-center justify-center mx-0 md:mx-8 mb-8 md:mb-0">
           <div className="relative flex items-center justify-center">
             <div className="absolute w-61 h-61 bg-blue-200 rounded-full opacity-60" style={{zIndex:0}}></div>
-            <img src={drop} alt="Water Drop" className="w-40 h-40 z-10 relative" />
+            <motion.img
+              src={droplet}
+              alt="Water Drop"
+              className="w-40 h-40 z-10 relative"
+              animate={{
+                rotate: [0, 8, -8, 0],
+                scale: [1, 1.05, 1, 0.98, 1]
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: 'easeInOut'
+              }}
+            />
           </div>
         </div>
         {/* Right: Health Impact */}
