@@ -8,6 +8,9 @@ import SafeGuarantee from './components/SafeGuarantee/SafeGuarantee.jsx';
 import SuccessStory from './components/SuccessStory/SuccessStory.jsx';
 import ExpertTeam from './components/ExpertTeam/ExpertTeam.jsx';
 import Leaders from './components/Leaders/Leaders.jsx';
+import Customers from './components/Customers/Customers.jsx';
+import BookNow from './components/BookNow/BookNow.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 const App = () => {
   return (
@@ -21,6 +24,9 @@ const App = () => {
     <SuccessStory/>
     <ExpertTeam/>
     <Leaders/>
+    <Customers/>
+    <BookNow/>
+    <Footer/>
     </>
   )
 }
