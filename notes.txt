@@ -1,0 +1,14 @@
+step1). make a repo
+step 2). copy the repo url
+step 3). go to cmd and write command--> git clone repo_url
+
+
+
+git to github===== for commit and push
+git status-- tells the status 
+git add .--- ready to add all the files
+git commit -m "Commit 2" ---commit staged the files
+git push-- push all the commit to github
+
+
+Branches => We use branch for the peoples that works together on their branch and merging them after completion of their work.

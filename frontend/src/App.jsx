@@ -1,11 +1,13 @@
-import './App.css'
+import React from 'react'
+import Navbar from './components/Navbar/Navbar.jsx';
+import ContactUs from './components/ContactUs/ContactUs.jsx';
 
-function App() {
-  
-
+const App = () => {
   return (
     <>
-      
+    <Navbar />
+    <ContactUs/>
+    
     </>
   )
 }
