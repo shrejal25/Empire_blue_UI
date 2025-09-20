@@ -5,7 +5,7 @@ import image from '../../assets/images/image.webp';
 const Impact = () => {
   return (
     <section className="w-full min-h-[60vh] bg-[#e3ebf0] flex items-center justify-center">
-      <div className="w-[90vw] max-w-[1200px] bg-[#e4e9ed] rounded-[32px] shadow-2xl flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-10 md:py-8 border-2 border-white">
+      <div className="w-[90vw] max-w-[1250px] bg-[#e4e9ed] rounded-[32px] shadow-2xl flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-10 md:py-8 border-2 border-white">
         {/* Left: Current Situation */}
         <div className="flex-1 flex flex-col items-start justify-center mb-10 md:mb-0 md:mr-6">
           <h2 className="text-lg md:text-3xl font-bold text-blue-900 mb-4">Current Situation</h2>

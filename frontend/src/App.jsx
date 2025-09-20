@@ -4,6 +4,10 @@ import ContactUs from './components/ContactUs/ContactUs.jsx';
 import AboutUs from './components/AboutUs/AboutUs.jsx';
 import Impact from './components/Impact/Impact.jsx';
 import EmpireBlueIntro from './components/EmpireBlueIntro/EmpireBlueIntro.jsx';
+import SafeGuarantee from './components/SafeGuarantee/SafeGuarantee.jsx';
+import SuccessStory from './components/SuccessStory/SuccessStory.jsx';
+import ExpertTeam from './components/ExpertTeam/ExpertTeam.jsx';
+import Leaders from './components/Leaders/Leaders.jsx';
 
 const App = () => {
   return (
@@ -13,6 +17,10 @@ const App = () => {
     <AboutUs/>
     <Impact/>
     <EmpireBlueIntro/>
+    <SafeGuarantee/>
+    <SuccessStory/>
+    <ExpertTeam/>
+    <Leaders/>
     </>
   )
 }

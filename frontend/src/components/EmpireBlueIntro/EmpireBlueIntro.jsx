@@ -4,7 +4,7 @@ import detail from '../../assets/images/detail.webp';
 const EmpireBlueIntro = () => {
   return (
     <section className="w-full min-h-[60vh] bg-[#e3ebf0] flex items-center justify-center pt-25">
-      <div className="w-[90vw] max-w-[1200px] bg-[#e4e9ed] rounded-[32px] shadow-2xl flex  flex-col md:flex-row items-center justify-between gap-2 px-4 md:px-8 py-10 md:py-10 border-2 border-white">
+      <div className="w-[90vw] max-w-[1250px] bg-[#e4e9ed] rounded-[32px] shadow-2xl flex  flex-col md:flex-row items-center justify-between gap-2 px-4 md:px-8 py-10 md:py-10 border-2 border-white">
         {/* Left: Illustration */}
         <div className="flex-1 flex items-center justify-center mb-10 md:mb-0 md:mr-8">
           <img src={detail} alt="Water Drop Illustration" className="w-[380px] md:w-[420px]" />
