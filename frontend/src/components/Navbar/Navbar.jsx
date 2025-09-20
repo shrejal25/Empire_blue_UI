@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-none px-8 py-4 flex items-center">
+    <nav className="fixed z-50 top-0 w-full bg-white shadow-none px-8 py-4 flex items-center">
       
       {/* Logo and Tagline */}
       <div className="ml-30">

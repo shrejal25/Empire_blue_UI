@@ -1,4 +1,5 @@
 import React from 'react';
+import './ContactUs.css';
 import can1 from '../../assets/images/can1.webp';
 import image from '../../assets/images/image.webp';
 
@@ -28,7 +29,7 @@ const ContactUs = () => {
           {/* Contact Us Button */}
           <a
         href="#book"
-        className="ml-35 px-7 py-3  bg-[#000080] text-white rounded-full font-bold text-lg shadow-md hover:bg-blue-800 transition flex items-center gap-2"
+        className="ml-35 mt-3 px-7 py-3  bg-[#000080] text-white rounded-full font-bold text-lg shadow-md hover:bg-blue-800 transition flex items-center gap-2"
       >
         Contact Us
         <span className="inline-block text-xl">&rarr;</span>
@@ -40,10 +41,10 @@ const ContactUs = () => {
 
   
   {/* Bottom curve decorative element */}
-  <div className="absolute bottom-0 top-150 left-0 w-full h-[200px] z-[1] pointer-events-none drop-shadow-[0_-5px_15px_rgba(0,0,0,0.1)]">
+  <div className="absolute bottom-0 top-152 left-0 w-full h-[200px] z-[1] pointer-events-none drop-shadow-[0_-5px_15px_rgba(0,0,0,0.1)]">
     <svg className="w-full h-full block" viewBox="0 0 1440 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <path d="M0,0  C240,200 480,280 720,280  C960,280 1200,200 1440,0" stroke="#fff" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M0,0  C240,200 480,280 720,280  C960,280 1200,200 1440,0  L1440,500 L0,500 Z" fill="#D7E0E7" filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1))"></path>
+      <path d="M0,0  C240,200 480,280 720,280  C960,280 1200,200 1440,0  L1440,500 L0,500 Z" fill="#D7E0E7" filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1)"></path>
     </svg>
   </div>
 </section>
