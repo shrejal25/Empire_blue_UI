@@ -1,4 +1,4 @@
-import React from 'react';
+
 import sandhya from '../../assets/images/sandhya.webp';
 import khobariya from '../../assets/images/1.webp';
 import mukesh from '../../assets/images/2.webp';

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import gagan from '../../assets/images/gagan.webp';
 
 const ExpertTeam = () => {

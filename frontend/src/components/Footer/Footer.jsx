@@ -1,5 +1,4 @@
-import React from 'react';
-import './Footer.css';
+
 import logo1 from '../../assets/images/logo1.webp';
 
 const Footer = () => {

@@ -1,4 +1,4 @@
-import './Benefits.css';
+
 
 
 const Benefits = () => {
@@ -34,7 +34,7 @@ const Benefits = () => {
       <div className="max-w-7xl mx-auto mb-0 md:mb-42">
         <div className="block lg:hidden">
           <div className="flex justify-center mb-8">
-            <div className="relative w-[350px] h-[350px]">
+            <div className="relative w-[280px] sm:w-[350px] h-[280px] sm:h-[350px]">
               <svg className="w-full h-full" viewBox="0 0 350 350">
                 <defs>
                   <linearGradient id="ringGradientMobile" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -76,27 +76,27 @@ const Benefits = () => {
 
           {/* Mobile Nutrient Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="w-full rounded-md p-4" style={{opacity:0,transform:'translateY(12px)'}}>
+            <div className="w-full rounded-md p-4 bg-white/50 backdrop-blur-sm shadow-sm">
               <h3 className="font-bold text-base mb-2 text-primary bg-clip-text">Anthoxanthin</h3>
               <div className="text-[13px] bg-gradient-to-r from-blue-700 to-purple-900 text-transparent bg-clip-text font-semibold mb-1">Healthy Bone</div>
               <p className="text-xs text-black leading-relaxed">Antioxidant properties beneficial for cancer treatment and heart health. Improves blood flow and reduces oxidative stress.</p>
             </div>
-            <div className="w-full rounded-md p-4" style={{opacity:0,transform:'translateY(12px)'}}>
+            <div className="w-full rounded-md p-4 bg-white/50 backdrop-blur-sm shadow-sm">
               <h3 className="font-bold text-base mb-2 text-primary bg-clip-text">Chlorophyll</h3>
               <div className="text-[13px] bg-gradient-to-r from-blue-700 to-purple-900 text-transparent bg-clip-text font-semibold mb-1">Healthy Lungs</div>
               <p className="text-xs text-black leading-relaxed">Strengthens the immune system and helps block cancer-causing chemicals. Aids in weight loss and lowers cholesterol levels.</p>
             </div>
-            <div className="w-full rounded-md p-4" style={{opacity:0,transform:'translateY(12px)'}}>
+            <div className="w-full rounded-md p-4 bg-white/50 backdrop-blur-sm shadow-sm">
               <h3 className="font-bold text-base mb-2 text-primary bg-clip-text">Lycopene</h3>
               <div className="text-[13px] bg-gradient-to-r from-blue-700 to-purple-900 text-transparent bg-clip-text font-semibold mb-1">Healthy Heart</div>
               <p className="text-xs text-black leading-relaxed">Powerful antioxidant that reduces oxidative damage and inflammation. Protects against various cancers and supports heart health.</p>
             </div>
-            <div className="w-full rounded-md p-4" style={{opacity:0,transform:'translateY(12px)'}}>
+            <div className="w-full rounded-md p-4 bg-white/50 backdrop-blur-sm shadow-sm">
               <h3 className="font-bold text-base mb-2 text-primary bg-clip-text">Carotenoids</h3>
               <div className="text-[13px] bg-gradient-to-r from-blue-700 to-purple-900 text-transparent bg-clip-text font-semibold mb-1">Immunity Booster</div>
               <p className="text-xs text-black leading-relaxed">Essential for vitamin A production supporting immune health. Reduces inflammation and promotes eye health while aiding hair growth.</p>
             </div>
-            <div className="w-full rounded-md p-4" style={{opacity:0,transform:'translateY(12px)'}}>
+            <div className="w-full rounded-md p-4 bg-white/50 backdrop-blur-sm shadow-sm">
               <h3 className="font-bold text-base mb-2 text-primary bg-clip-text">Anthocyanin</h3>
               <div className="text-[13px] bg-gradient-to-r from-blue-700 to-purple-900 text-transparent bg-clip-text font-semibold mb-1">Healthy Brains</div>
               <p className="text-xs text-black leading-relaxed">Lowers blood pressure and reduces the risk of heart disease. Protects brain function and may slow cancer growth.</p>
@@ -107,7 +107,7 @@ const Benefits = () => {
         {/* Desktop Layout */}
         <div className="hidden lg:block">
           <div className="relative flex justify-center items-center">
-            <div className="relative w-[550px] h-[550px]">
+            <div className="relative w-[400px] lg:w-[550px] h-[400px] lg:h-[550px]">
               <svg className="w-full h-full" viewBox="0 0 550 550">
                 <defs>
                   <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">

@@ -1,5 +1,4 @@
-import React from 'react';
-import './Impact.css';
+
 import drop from '../../assets/images/waterDrop.png';
 
 const Impact = () => {

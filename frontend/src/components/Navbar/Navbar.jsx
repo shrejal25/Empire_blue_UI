@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import logo1 from '../../assets/images/logo1.webp';
-import './Navbar.css';
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

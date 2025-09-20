@@ -60,28 +60,30 @@ const stats = [
 const SuccessStory = () => {
   const [activeIdx, setActiveIdx] = useState(null);
   return (
-    <section className="w-full bg-[#d7e0e7] flex flex-col items-center justify-center py-12">
-      <h2 className="text-4xl md:text-6xl font-bold text-center mb-2 text-blue-900">
+    <section className="w-full bg-[#d7e0e7] flex flex-col items-center justify-center py-8 sm:py-12">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-2 text-blue-900 px-4">
         Our <span className="bg-gradient-to-r from-blue-900 via-blue-500 to-green-400 bg-clip-text text-transparent">Success</span> Story
       </h2>
-      <p className="text-lg md:text-xl text-gray-600 text-center mb-10 max-w-2xl">
+      <p className="text-base sm:text-lg md:text-xl text-gray-600 text-center mb-8 sm:mb-10 max-w-2xl px-4">
         Trusted by thousands of customers across India, delivering pure and healthy water solutions
       </p>
-      <div className="w-full flex justify-center gap-0 mb-8">
-        {stats.map((stat, idx) => (
-          <StatCard
-            key={idx}
-            icon={stat.icon}
-            iconBg={stat.iconBg}
-            value={stat.value}
-            label={stat.label}
-            highlight={stat.highlight}
-            active={activeIdx === idx}
-            onClick={() => setActiveIdx(idx)}
-          />
-        ))}
+      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 mb-8">
+          {stats.map((stat, idx) => (
+            <StatCard
+              key={idx}
+              icon={stat.icon}
+              iconBg={stat.iconBg}
+              value={stat.value}
+              label={stat.label}
+              highlight={stat.highlight}
+              active={activeIdx === idx}
+              onClick={() => setActiveIdx(idx)}
+            />
+          ))}
+        </div>
       </div>
-      <div className="w-40 h-1 rounded-full bg-gradient-to-r from-blue-500 to-green-400 mx-auto mt-2" />
+      <div className="w-32 sm:w-40 h-1 rounded-full bg-gradient-to-r from-blue-500 to-green-400 mx-auto mt-2" />
     </section>
   );
 };

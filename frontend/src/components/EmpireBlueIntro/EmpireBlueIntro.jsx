@@ -1,4 +1,4 @@
-import React from 'react';
+
 import detail from '../../assets/images/detail.webp';
 
 const EmpireBlueIntro = () => {

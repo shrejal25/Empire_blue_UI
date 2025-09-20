@@ -1,4 +1,4 @@
-import React from 'react';
+
 import excellence from '../../assets/images/excellence.svg';
 import pure from '../../assets/images/pure.svg';
 import eco from '../../assets/images/eco.svg';

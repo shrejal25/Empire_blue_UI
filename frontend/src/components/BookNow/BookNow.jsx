@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Dots = () => (
   <div className="flex flex-col gap-1">
