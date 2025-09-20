@@ -1,7 +1,9 @@
-
-
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const Benefits = () => {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: true, margin: '-100px' });
   return (
     <div className="relative bg-[#d7e0e7] pb-10" >
       {/* Top Wave SVG */}
@@ -18,7 +20,13 @@ const Benefits = () => {
         </svg>
       </div>
 
-     <div className='max-w-7xl mx-auto bg-[#E4E9ED] shadow-lg rounded-3xl py-16 md:py-24 p-6' style={{opacity: 1, transform: 'none'}}>
+     <motion.div
+       ref={cardRef}
+       initial={{ opacity: 0, y: 40 }}
+       animate={isInView ? { opacity: 1, y: 0 } : {}}
+       transition={{ duration: 0.8, ease: 'easeOut' }}
+       className='max-w-7xl mx-auto bg-[#E4E9ED] shadow-lg rounded-3xl py-16 md:py-24 p-6'
+     >
          {/* Header Section */}
       <div className="mb-12 mt-12">
         <h2 className="text-center text-3xl md:text-5xl font-bold text-primary mt-5" style={{opacity: 1, transform: 'none'}}>
@@ -189,7 +197,7 @@ const Benefits = () => {
           </div>
         </div>
       </div>
-     </div>
+  </motion.div>
     </div>
 
   )

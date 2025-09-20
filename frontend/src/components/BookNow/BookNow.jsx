@@ -1,3 +1,5 @@
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const Dots = () => (
   <div className="flex flex-col gap-1">
@@ -20,9 +22,17 @@ const Dots = () => (
 );
 
 const BookNow = () => {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: true, margin: '-100px' });
   return (
     <section className="w-full min-h-[50vh] bg-[#d7e0e7] flex items-center justify-center py-15">
-      <div className="relative w-[100vw] max-w-5xl bg-[#ecf1f5] rounded-3xl shadow-lg flex flex-col items-center justify-center px-30 md:px-30 py-16">
+      <motion.div
+        ref={cardRef}
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="relative w-[100vw] max-w-5xl bg-[#ecf1f5] rounded-3xl shadow-lg flex flex-col items-center justify-center px-30 md:px-30 py-16"
+      >
         {/* Top Left Dots */}
         <div className="absolute top-6 left-6"><Dots /></div>
         {/* Top Right Dots */}
@@ -45,7 +55,7 @@ const BookNow = () => {
         >
           Book Now
         </a>
-      </div>
+  </motion.div>
     </section>
   );
 };

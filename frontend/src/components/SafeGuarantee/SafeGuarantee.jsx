@@ -1,18 +1,30 @@
 
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import excellence from '../../assets/images/excellence.svg';
 import pure from '../../assets/images/pure.svg';
 import eco from '../../assets/images/eco.svg';
 
-// Card component using props
-const GuaranteeCard = ({ icon, iconBg, title, description }) => (
-  <div className="flex flex-col bg-[#e4e9ed] rounded-3xl shadow-xl py-5 px-8 w-full max-w-sm min-h-[220px] mx-auto">
-    <div className={`w-12 h-12 flex items-center justify-center rounded-xl mb-4 ${iconBg}`}>
-      <img src={icon} alt={title} className="w-6 h-6" />
-    </div>
-    <h3 className="text-xl font-bold text-blue-900 mb-2">{title}</h3>
-    <p className="w-90 text-lg text-gray-700">{description}</p>
-  </div>
-);
+const GuaranteeCard = ({ icon, iconBg, title, description }) => {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: true, margin: '-100px' });
+  return (
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className="flex flex-col bg-[#e4e9ed] rounded-3xl shadow-xl py-5 px-8 w-full max-w-sm min-h-[220px] mx-auto"
+    >
+      <div className={`w-12 h-12 flex items-center justify-center rounded-xl mb-4 ${iconBg}`}>
+        <img src={icon} alt={title} className="w-6 h-6" />
+      </div>
+      <h3 className="text-xl font-bold text-blue-900 mb-2">{title}</h3>
+      <p className="w-90 text-lg text-gray-700">{description}</p>
+    </motion.div>
+  );
+};
 
 const SafeGuarantee = () => {
   const cards = [

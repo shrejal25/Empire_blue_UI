@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 
 const testimonials = [
@@ -36,7 +37,8 @@ const Customers = () => {
       </p>
       {/* Carousel */}
       <div className="relative w-full max-w-3xl mx-20">
-        <div className="bg-[#e4e9ed] rounded-3xl shadow-xl px-10 py-12 flex flex-col items-center relative min-h-[340px]">
+        <TestimonialFadeIn>
+          <div className="bg-[#e4e9ed] rounded-3xl shadow-xl px-10 py-12 flex flex-col items-center relative min-h-[340px]">
           {/* Stars */}
           <div className="flex justify-center mb-4">
             {[...Array(testimonial.rating)].map((_, i) => (
@@ -68,7 +70,8 @@ const Customers = () => {
           <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-2xl text-blue-900 hover:bg-blue-100 transition">
             <span>&#8594;</span>
           </button>
-        </div>
+          </div>
+        </TestimonialFadeIn>
       </div>
       {/* Stats Bar */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-1 mt-12">
@@ -81,6 +84,21 @@ const Customers = () => {
       </div>
     </section>
   );
+
+function TestimonialFadeIn({ children }) {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: true, margin: '-100px' });
+  return (
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 };
 
 export default Customers;
