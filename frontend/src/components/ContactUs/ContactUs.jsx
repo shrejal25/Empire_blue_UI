@@ -1,11 +1,22 @@
 
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import can1 from '../../assets/images/can1.webp';
 import image from '../../assets/images/image.webp';
 
 const ContactUs = () => {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: true, margin: '-100px' });
+
   return (
     <section className="w-full min-h-[80vh] bg-[#d7e0e7] flex items-center justify-center py-4 sm:py-8 relative">
-      <div className="w-[95vw] sm:w-[90vw] max-w-[1120px] bg-[#e4e9ed] rounded-[20px] sm:rounded-[40px] drop-shadow-[0_0px_20px_rgba(0,0,255,0.2)] flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-20 py-8 sm:py-10 lg:py-20 relative overflow-hidden">
+      <motion.div
+        ref={cardRef}
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="w-[95vw] sm:w-[90vw] max-w-[1120px] mt-30 bg-[#e4e9ed] rounded-[20px] sm:rounded-[40px] drop-shadow-[0_0px_20px_rgba(0,0,255,0.2)] flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-20 py-8 sm:py-10 lg:py-20 relative overflow-hidden"
+      >
         {/* Left: Cans Image */}
         <div className="flex-1 flex items-center justify-center mb-6 lg:mb-0 order-2 lg:order-1">
           <img 
@@ -42,7 +53,7 @@ const ContactUs = () => {
             <span className="inline-block text-lg sm:text-xl">&rarr;</span>
           </a>
         </div>
-      </div>
+  </motion.div>
     
 
 
@@ -70,8 +81,8 @@ const ContactUs = () => {
             filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1))"
           />
         </svg>
-  </div>
-</section>
+      </div>
+    </section>
   );
 };
 
