@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import img2026 from "../../assets/images/2026.webp";
 import img2027 from "../../assets/images/2027.webp";
 import img2028 from "../../assets/images/2028.webp";
@@ -35,24 +36,49 @@ const milestones = [
 
 const Milestone = () => {
   return (
-    <section className="w-full min-h-[60vh] bg-[#d7e0e7] py-8 sm:py-12">
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 text-blue-900 text-center">
+    <section className="w-full min-h-[60vh] bg-[#d7e0e7] py-6 xs:py-8 sm:py-12 px-2 xs:px-4">
+      <motion.div
+        className="w-full max-w-6xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <motion.h2
+          className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 xs:mb-8 sm:mb-12 text-blue-900 text-center"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
+        >
           <span role="img" aria-label="trophy">🏆</span>
           <span> Our <span className="bg-gradient-to-r from-blue-900 via-blue-500 to-green-400 bg-clip-text text-transparent">Milestone</span></span>
-        </h2>
+        </motion.h2>
 
         {/* Mobile/Tablet Timeline */}
-        <div className="block lg:hidden space-y-8">
+        <motion.div
+          className="block lg:hidden space-y-6 xs:space-y-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
+        >
           {milestones.map((milestone, idx) => (
-            <div key={idx} className="flex items-start gap-4 relative">
+            <motion.div
+              key={idx}
+              className="flex items-start gap-3 xs:gap-4 relative"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.1 * idx, ease: 'easeOut' }}
+            >
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-white border-2 border-blue-500 rounded-xl flex items-center justify-center shadow-md overflow-hidden">
+                <div className="w-12 xs:w-16 h-12 xs:h-16 bg-white border-2 border-blue-500 rounded-xl flex items-center justify-center shadow-md overflow-hidden">
                   <img src={milestone.img} alt={milestone.title} className="w-full h-full object-contain" />
                 </div>
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-bold mb-1">
+                <h3 className="text-base xs:text-lg font-bold mb-1">
                   {milestone.title.split(' ').map((word, i) => {
                     if (word === 'Black' || word === 'Newtro-X' || word === 'Java-X' || word === 'Our' || word === 'Vehicle' || word === 'Care') {
                       return (
@@ -73,22 +99,28 @@ const Milestone = () => {
                     }
                   })}
                 </h3>
-                <p className="text-sm text-gray-700">{milestone.desc}</p>
+                <p className="text-xs xs:text-sm text-gray-700">{milestone.desc}</p>
               </div>
               {idx < milestones.length - 1 && (
-                <div className="absolute left-8 top-16 w-px h-8 bg-gray-300"></div>
+                <div className="absolute left-6 xs:left-8 top-12 xs:top-16 w-px h-6 xs:h-8 bg-gray-300"></div>
               )}
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Desktop Timeline */}
         <div className="hidden lg:block">
           {/* Top Milestones */}
-          <div className="w-full max-w-5xl mx-auto py-6 flex flex-row justify-between mb-8">
+          <motion.div
+            className="w-full max-w-5xl mx-auto py-4 md:py-6 flex flex-row justify-between mb-6 md:mb-8 gap-4"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
+          >
             {milestones.slice(0, 2).map((m, i) => (
-              <div key={i} className="flex-1 text-left">
-                <div className="text-lg font-bold mb-1">
+              <div key={i} className="flex-1 min-w-0 text-left">
+                <div className="text-base md:text-lg font-bold mb-1">
                   {m.title.split(' ').map((word, i) => {
                     if (word === 'Black' || word === 'Newtro-X' || word === 'Java-X' || word === 'Our' || word === 'Vehicle' || word === 'Care') {
                       return (
@@ -109,26 +141,38 @@ const Milestone = () => {
                     }
                   })}
                 </div>
-                <div className="text-lg text-gray-700">{m.desc}</div>
+                <div className="text-base md:text-lg text-gray-700">{m.desc}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
           {/* Images Timeline */}
-          <div className="flex items-center justify-center gap-6 md:gap-10 mb-8 py-8">
+          <motion.div
+            className="flex items-center justify-center gap-3 md:gap-6 lg:gap-10 mb-6 md:mb-8 py-4 md:py-8"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          >
             {milestones.map((m, i) => (
               <React.Fragment key={i}>
-                <span className="flex items-center justify-center overflow-hidden">
+                <span className="w-14 md:w-20 h-14 md:h-20 rounded-xl flex items-center justify-center overflow-hidden">
                   <img src={m.img} alt={m.title} className="w-full h-full object-contain" />
                 </span>
-                {i !== milestones.length - 1 && <span className="text-4xl md:text-5xl text-blue-700">&#8594;</span>}
+                {i !== milestones.length - 1 && <span className="text-2xl md:text-4xl lg:text-5xl text-blue-700">&#8594;</span>}
               </React.Fragment>
             ))}
-          </div>
+          </motion.div>
           {/* Bottom Milestones */}
-          <div className="w-full max-w-5xl mx-auto flex flex-row justify-between gap-8 py-6">
+          <motion.div
+            className="w-full max-w-5xl mx-auto flex flex-row justify-between gap-4 md:gap-8 py-4 md:py-6"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+          >
             {milestones.slice(2).map((m, i) => (
-              <div key={i} className="flex-1 text-left">
-                <div className="text-lg font-bold mb-1">
+              <div key={i} className="flex-1 min-w-0 text-left">
+                <div className="text-base md:text-lg font-bold mb-1">
                   {m.title.split(' ').map((word, i) => {
                     if (word === 'Black' || word === 'Plum' || word === 'Newtro-X' || word === 'Java-X' || word === 'Our' || word === 'Vehicle' || word === 'Care') {
                       return (
@@ -149,12 +193,12 @@ const Milestone = () => {
                     }
                   })}
                 </div>
-                <div className="text-lg text-gray-700">{m.desc}</div>
+                <div className="text-base md:text-lg text-gray-700">{m.desc}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+  </motion.div>
     </section>
   );
 };
